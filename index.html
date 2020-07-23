@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			* {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="Appcnt">
+			<el-row>
+				<el-col :md="4">
+					<h1>发动机品牌</h1>
+				</el-col>
+				<el-col :md="12">
+					<!--输入框-->
+					<el-col :md="8">
+						<el-input type="text" v-model="rost.brand" placeholder="请输入要查询的品牌"></el-input>
+					</el-col>
+					
+					<el-col :md='3' :push='1'>
+						<el-button type="success" plain>查询</el-button>						
+					</el-col>
+					
+					<el-col :md='3' :push='1'>
+						<el-button type="success" plain>增加</el-button>						
+					</el-col>
+					
+					<el-col :md='3' :push='1'>
+						<el-button type="success" plain>查询</el-button>						
+					</el-col>
+				</el-col>
+				
+			</el-row>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script>
+		var vm = new Vue({
+			data() {
+				
+				var t = ``
+				
+				return {
+					rost: {
+						brand: ''
+					}
+				};
+			}
+		}).$mount("#Appcnt");
+	</script>
+
+</html>
